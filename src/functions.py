@@ -8,8 +8,8 @@ def help_message():
     This function prints out a help message in order to run this program correctly
     """
     print('In order to use this program you should run the following commands:\n'
-          'For Windows: py main.py <inputfile_path>\n'
-          'For Linux or Mac: python3 main.py <inputfile_path>\nAtt: Carlos Carvajal')
+          'For Windows: py main.py <input-file_path>\n'
+          'For Linux or Mac: python3 main.py <input-file_path>\nAtt: Carlos Carvajal')
 
 
 def build_employee_schedule_struct(employee: str, schedule_data: str) -> dict:
@@ -17,7 +17,7 @@ def build_employee_schedule_struct(employee: str, schedule_data: str) -> dict:
     This function process employee's name and their schedule sent as parameter in order to build a data structure
     which contains the employee name and the data from their schedule
 
-    :parameters
+    parameters
 
     employee: str
         The name of the employee.
@@ -25,7 +25,7 @@ def build_employee_schedule_struct(employee: str, schedule_data: str) -> dict:
     schedule_data: str
         The schedule data of the employee
 
-    :return
+    return
         The data structure that links each employee with their own schedule
     """
     schedule = dict()
@@ -39,7 +39,7 @@ def parse_time_string_to_datetime(time_string: str, time_format="%H:%M") -> dt:
     This function parse the time string sent as a parameter, to a datetime object according to a time format.
     Default time format es %H:%M
 
-    :parameters
+    parameters
 
     time_string: str
         The time of the schedule as a string.
@@ -47,7 +47,7 @@ def parse_time_string_to_datetime(time_string: str, time_format="%H:%M") -> dt:
     time_format: str
         The format of the time that the function will parse the string.
 
-    :return
+    return
         The datetime object of the string
     """
     return dt.strptime(time_string, time_format)
@@ -57,12 +57,12 @@ def parse_schedule_string_to_dict(schedule_string: str) -> dict:
     """
     This function parse the schedule string sent as a parameter, to a dictionary.
 
-    :parameters
+    parameters
 
     schedule_string: str
         The time of the schedule as a string.
 
-    :return
+    return
         A schedule dictionary with a day code as a key and a range of time as the value.
     """
     schedule_dic = {}
@@ -80,7 +80,7 @@ def is_a_coincided_hour_range(hour_range: dict, other_hour_range: dict) -> bool:
     This function decides if the hour ranges sent as a parameter match, if they are, that means that the employees
     have coincided at that range of time in the office.
 
-    :parameters
+    parameters
 
     hour_range: dict
         The start time and end time (hour range) of a schedule saved in a dictionary.
@@ -88,7 +88,7 @@ def is_a_coincided_hour_range(hour_range: dict, other_hour_range: dict) -> bool:
     other_hour_range: dict
         The start time and end time (hour range) of a different schedule from the other saved in a dictionary.
 
-    :return
+    return
         A Boolean value that determines whether the ranges of hours coincided
     """
     if hour_range is not None and other_hour_range is not None:
@@ -103,7 +103,7 @@ def calculate_times_coincided(schedule: dict, other_schedule: dict) -> int:
     """
     This function compares different schedules in order to calculate how many times these schedules have coincided.
 
-    :parameters
+    parameters
 
     schedule: dict
         The schedule object from an employee that contains the days and the hours they have worked.
@@ -111,7 +111,7 @@ def calculate_times_coincided(schedule: dict, other_schedule: dict) -> int:
     other_schedule: dict
         The schedule object from a different employee that contains the days and the hours they have worked.
 
-    :return
+    return
         The times that this employee's schedules have coincided
     """
     times_coincided = 0
@@ -123,11 +123,12 @@ def calculate_times_coincided(schedule: dict, other_schedule: dict) -> int:
 
 def compare_schedules(schedules: list):
     """
-    This function process all the schedules data in a list sent as a parameter and compare them.
+    This function process all the schedules' data in a list sent as a parameter and compare them.
     Finally, it prints out a table containing pairs of employees and how often they have coincided in the office.
 
-    :parameters
-    schedules : list
+    parameters
+
+    schedules: list
         A list that contains all employee's schedules.
     """
     for i in range(len(schedules)):

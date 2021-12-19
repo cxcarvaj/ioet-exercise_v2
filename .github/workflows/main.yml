@@ -1,4 +1,4 @@
-name: Continuous Integration Tests
+name: Continuous Integration Testing
 on: [push]
 
 jobs:
@@ -19,4 +19,4 @@ jobs:
           architecture: x64
       - name: Run Tests
         working-directory: ./testing
-        run: python3 ./test.py
+        run: python3 ./tests.py

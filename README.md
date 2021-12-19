@@ -61,7 +61,7 @@ you can use both of them  or create a new one with the same structure.
 
 The tests that I made are using unittest, that is a built-in library of python3.
 
-All the test are found in [testing/test.py](https://github.com/cxcarvaj/ioet-exerciseV2/blob/main/testing/test.py). 
+All the tests are found in [testing/tests.py](https://github.com/cxcarvaj/ioet-exerciseV2/blob/main/testing/tests.py). 
 To run the tests:
 1. You will need to go to the testing directory inside the 
 project folder. 
@@ -74,11 +74,11 @@ Once you are there, run the following commands:
 
 If you are using Windows:
 ```
-py .\test.py
+py .\tests.py
 ```
 If you are Using Linux or Mac:
 ```
-python3 .\test.py
+python3 ./tests.py
 ```
 
 ## Project structure
@@ -87,7 +87,7 @@ The main code can be found in the ``src`` folder in the ``main.py`` file of
 the project folder, the functions used in this program are located 
 also in the ``src`` folder, but in the ``functions.py`` file.
 In the root folder, there two samples of .txt file to run the program. 
-There is also a unit testing file called ``test.py`` which has 7 tests that evaluates
+There is also a unit testing file called ``tests.py`` which has 7 tests that evaluates
 the functions used in the solution of the problem, this file can be found 
 in the ``testing`` folder.
 
@@ -126,3 +126,10 @@ In this project I used unittest to create the tests with different
 test cases with valid and invalid arguments.
 
 [![testsuite.jpg](https://i.postimg.cc/3JbFrCr8/testsjpg.jpg)](https://postimg.cc/tYWx26Vw)
+
+### Continuous Integration Testing
+Finally, in this project I decided to use GitHub Actions tool for the first time, 
+to automate the testing process every time I push code to my repo the tests
+are going to be executed as a job.
+
+[![CI-Testing.png](https://i.postimg.cc/52BpmVPR/CI-Testing.png)](https://postimg.cc/68Qd9Dxr)

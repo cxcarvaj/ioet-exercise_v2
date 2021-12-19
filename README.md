@@ -87,7 +87,8 @@ The main code can be found in the ``src`` folder in the ``main.py`` file of
 the project folder, the functions used in this program are located 
 also in the ``src`` folder, but in the ``functions.py`` file.
 In the root folder, there two samples of .txt file to run the program. 
-There is also a unit testing file called ``test.py`` which is found 
+There is also a unit testing file called ``test.py`` which has 7 tests that evaluates
+the functions used in the solution of the problem, this file can be found 
 in the ``testing`` folder.
 
 ## Solution
@@ -115,9 +116,10 @@ strategy is to divide the hole problem into small problems or subproblems/subtas
 
 You can see a complete documentation of each function in [functions.py](https://github.com/cxcarvaj/ioet-exerciseV2/blob/main/src/functions.py):
 
-The general program complexity is O(n²) due to this problem is a combinatorial one,
+The general program complexity is ``O(n²*m)`` due to this problem is a combinatorial one,
 since we have to compare one schedule with all the others, so we can calculate 
-how many times each employee has coincided in the office.
+how many times each employee has coincided in the office. Where n is the amount 
+of schedules to compare and m are the days when an employee has worked.
 
 ### Unit Test
 In this project I used unittest to create the tests with different 

@@ -116,20 +116,25 @@ strategy is to divide the hole problem into small problems or subproblems/subtas
 
 You can see a complete documentation of each function in [functions.py](https://github.com/cxcarvaj/ioet-exerciseV2/blob/main/src/functions.py):
 
-The general program complexity is ``O(n²*m)`` due to this problem is a combinatorial one,
-since we have to compare one schedule with all the others, so we can calculate 
-how many times each employee has coincided in the office. Where n is the amount 
-of schedules to compare and m are the days when an employee has worked.
+The general program complexity is ``O(n² * m)`` 
+Where n is the amount of schedules to compare and m are 
+the days when an employee has worked. 
+This complexity is due to the fact that 
+this problem is combinatorial,
+since we have to compare one schedule with all the others
+from the list, so that we can calculate how many times 
+each employee has coincided in the office.
 
 ### Unit Test
-In this project I used unittest to create the tests with different 
+In this project I used unittest that is a built-in testing library
+in Python, to create the tests with different 
 test cases with valid and invalid arguments.
 
 [![testsuite.jpg](https://i.postimg.cc/3JbFrCr8/testsjpg.jpg)](https://postimg.cc/tYWx26Vw)
 
 ### Continuous Integration Testing
 Finally, in this project I decided to use GitHub Actions tool for the first time, 
-to automate the testing process every time I push code to my repo the tests
+to automate the testing process. Every time I push code to my repo, the tests
 are going to be executed as a job.
 
 [![CI-Testing.png](https://i.postimg.cc/52BpmVPR/CI-Testing.png)](https://postimg.cc/68Qd9Dxr)

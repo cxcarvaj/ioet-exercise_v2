@@ -74,11 +74,11 @@ Once you are there, run the following commands:
 
 If you are using Windows:
 ```
-py .\tests.py
+py -m unittest -v
 ```
 If you are Using Linux or Mac:
 ```
-python3 ./tests.py
+python3 -m unittest -v
 ```
 
 ## Project structure
